@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.text-center {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	
+		foreach( $datas as $key => $val )
+		<h1 :class="textCenter">{{title}}</h1>
+
+		<span v-if="laundries.length == 2">Data hanya ada 2</span>
+		<table border="1">
+			<tr
+				v-for="(laundry, i) in laundries"
+				:key="i"
+			>
+				<td>{{i}}</td>
+				<td>{{laundry.name}}</td>
+			</tr>
+		</table>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+	<script>
+		let vue = new Vue({
+			el: '#app',
+			data: {
+				title: 'Laundry App',
+				subtitle: '<h2>Laundry everyday</h2>',
+				textCenter: 'text-center',
+				laundries: [
+					{
+						id: 1,
+						name: 'Laundry 1'
+					},
+					{
+						id: 2,
+						name: 'Laundry 2'
+					},
+					{
+						id: 3,
+						name: 'Laundry 3'
+					}
+				]
+			},
+			beforeCreated() {
+
+			},
+			created() {
+				// ketika get data dari API
+			},
+			mounted() {
+				// ketika 
+				this.title = 'Market App'
+			}
+		})
+
+		document.getElementsByClass('.text-center').forEach(item => {
+			item.innerHTML = 'dwadawda'
+		})
+
+	</script>
+</body>
+</html>
+
+
+
+
+
